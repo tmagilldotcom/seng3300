@@ -1,0 +1,377 @@
+/*------------------------------------------------------------------------------------------------------------------------
+
+This is the styling for the frame for each page. The elements within this section are on all pages.
+
+------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*  This is the header section */
+.main_header
+{
+	position:relative;
+	display:block;
+	height:75px;
+	width:100%;
+}
+
+.main_header_section
+{
+	width:1100px;
+	height:100%;
+	position:relative;
+	margin: 0 auto;
+}
+
+.main_header_section div
+{
+	float:left;
+}
+
+.main_banner
+{
+	width:800px;
+}
+
+.header_login_section
+{
+	width:300px;
+	text-align:center;
+}
+
+.header_login_in
+{
+	background:rgba(102,153,255,1);
+	border:solid 2px rgba(0,0,0,1);
+	position:absolute;
+	width:auto;
+	height:auto;
+	top: 10px;
+	right:20px;
+	padding:5px;
+	display:block;
+}
+
+.header_login_out
+{
+	background:rgba(102,153,255,1);
+	border:solid 2px rgba(0,0,0,1);
+	position:absolute;
+	width:auto;
+	height:auto;
+	top: 10px;
+	right:20px;
+	padding:5px;
+	display:none;
+}
+
+
+
+
+.main_hr
+{
+	width:90%;
+	height:10px;
+	background:url(../img/hr_img.jpg);
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	margin: 0 auto;
+}
+
+
+
+
+
+/*  This is the body section */
+
+.main_body
+{
+	position:relative;
+	top:0;
+	left:0;
+	height:600px;
+	width:100%;	
+}
+
+.main_breadcrumbs
+{
+	position:relative;
+	margin-left:20px;
+}
+
+.main_breadcrumbs a
+{
+	text-decoration:none;
+}
+
+.main_breadcrumbs a:hover
+{
+	text-decoration:underline;
+}
+
+.main_page_header
+{
+	position:relative;
+	top:0;
+	margin-left:40px;
+	width:auto;
+	font-size:30px;
+	font-family:"Arial Black", Gadget, sans-serif;
+	text-decoration:underline;
+}
+
+.main_body_section
+{
+	width:1000px;
+	height:auto;
+	position:relative;
+	margin: 0 auto;
+}
+
+.main_bottom_nav
+{
+	width:1100px;
+	height:125px;
+	background:rgba(125,125,125,1);
+	position:relative;
+	top:20px;
+	margin: 0 auto;
+}	
+
+
+
+
+
+
+
+/*  This is the foot section */
+
+
+.main_foot
+{
+	position:relative;
+	top:0;
+	left:0;
+	width:100%;
+	background:rgba(102,153,255,1);
+	text-align:center;
+}
+.main_foot span
+{
+	font-style:italic;
+}
+
+
+
+/*  This is the form input section */
+input[type=text], input[type=password]
+{
+	padding:7px;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	width:60%;
+	border:solid;
+	-moz-border-radius: 10px;  
+	-webkit-border-radius: 10px;  
+	border-radius: 10px; 
+}
+input[type=submit]
+{	
+	height:50px;
+	margin-top:3px;
+	background-color:rgba(102,153,255,1);
+	font-size:24px;
+	border:2px solid rgba(0,0,0,1);
+	cursor:pointer;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+input[type=submit]:hover
+{
+	width:auto;
+	height:50px;
+	margin-top:3px;
+	background-color:rgba(102,153,255,1);
+	font-size:24px;
+	border:4px inset rgba(0,0,0,1);
+	padding-left:20px;
+	padding-right:20px;
+}
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------
+
+The following stylings refer to the index page
+
+------------------------------------------------------------------------------------------------------------------------*/
+
+/*  This is for the index section */
+
+.index_body_section
+{
+	height:100%;
+	width:100%;
+	position:relative;	
+	background: rgba(255,255,255,.5);
+}
+
+.index_right, .index_left
+{
+	width:496px;
+	float:left;
+	height:100%;
+	position:relative;
+}
+
+.index_right
+{
+	width:inhert;
+	height:inherit;
+}
+
+/*  This is for the left section for the index page */
+
+.index_info_section
+{
+	float:left;
+	width:430px;
+	height:527px;
+	margin-left:15px;
+	position:relative;
+	margin-top:15px;
+	background:rgba(102,153,255,1);
+	padding:15px;
+	border:double 5px #000000;
+}
+
+/* entire container, keeps perspective */
+.index_info_section
+{
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+.index_info_section:hover .index_info_flipper, .index_info_section.hover .index_info_flipper {
+		transform: rotateY(180deg);
+	}
+
+.index_info_section, .index_info_front, .index_info_back 
+{
+	width: 430px;
+	height: 527px;
+}
+
+/* flip speed goes here */
+.index_info_flipper 
+{
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.index_info_front, .index_info_back 
+{
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.index_info_front 
+{
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.index_info_back 
+{
+	transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+/*  This is for the right section for the index page */
+
+.index_login, .index_register, .index_search
+{
+	float:left;
+	width:430px;
+	margin-left:15px;
+	position:relative;
+	margin-top:15px;
+	background:rgba(255,255,255,1);
+	padding:15px;
+	border:double 5px #000000;
+}
+.index_login
+{
+	height:168px;
+}
+
+.index_register, .index_search
+{
+	height:123px;
+}
+
+.index_login:hover, .index_register:hover, .index_search:hover
+{
+	box-shadow: rgba(0,0,0,0.4) 10px 10px;
+	
+}
+.index_login:hover, .index_register:hover, .index_search:hover
+{
+	box-shadow: rgba(0,0,0,0.4) 10px 10px;
+	
+}
+
+.right_header
+{
+	font-size:20px;
+	font-family:Arial, Helvetica, sans-serif;
+	position:relative;
+	text-align:center;
+}
+
+.index_login_section, .index_search_section
+{
+	width:100%;
+}
+
+.login_form, .search_form
+{
+	width:inherit;
+	text-align:center;
+}
+
+.index_login_options
+{
+	margin-top:5px;
+	width:100%;
+	text-align:center;
+}
+
+.index_login_options a
+{
+	text-decoration:none;
+}
+
+.index_login_options a:hover
+{
+	text-decoration:underline;
+}
+
+
+
+
+
